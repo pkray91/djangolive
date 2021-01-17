@@ -1,0 +1,20 @@
+{% extends 'master.html' %}
+
+{% load static %}
+
+{% block content %}
+<form action="/add/" method="get">
+	<!-- {{ form }} -->
+	<label>Name</label><br>
+	<input type="text" name="name"><br>
+	<label>Email</label><br>
+	<input type="email" name="email"><br>
+	<label>Mobile</label><br>
+	<input type="text" name="mobile"><br>
+	<label>Salry</label><br>
+	<input type="text" name="salary"><br>
+	<label>Address</label><br>
+	<textarea name="Address"></textarea><br><br> 
+	<input type="submit" name="sub">
+</form>
+{% endblock %}

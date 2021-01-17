@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<center><h1>Table Data</h1></center>
+<a href="/demo/form/">Add data</a>
+<table border="1" style="border-collapse: collapse;" width="100%" height="400">
+	<tr>
+		<th>So no</th>
+		<th>Name</th>
+		<th>Email</th>
+		<th>Mobile</th>
+		<th>Salary</th>
+		<th>Address</th>
+		<td colspan="2">Action</td>
+	</tr>
+	{% for data in store %}
+	<tr>
+		<td>{{ forloop.counter }}</td>
+		<td>{{ data.name }}</td>
+		<td>{{ data.email }}</td>
+		<td>{{ data.mobile }}</td>
+		<td>{{ data.salary }}</td>
+		<td>{{ data.Address }}</td>
+		<td><a href="/demo/getdataforedit/{{ data.id }}">Edit</a></td>
+		<td><a href="/demo/delete/{{ data.id }}">Delete</a></td>
+	</tr>
+	{% endfor %}
+</table>
+</body>
+</html>
